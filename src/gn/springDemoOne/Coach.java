@@ -1,4 +1,4 @@
-package gn.springdemo;
+package gn.springDemoOne;
 
 public interface Coach {
 
