@@ -9,7 +9,7 @@
     </bean>
 
     <bean id="myCoach"
-          class="gn.springDemoOne.BaseballCoach">
+          class="gn.springDemoOne.TrackCoach">
 
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortune"/>
