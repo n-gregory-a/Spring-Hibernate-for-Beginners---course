@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- define the dependency -->
-    <bean id="myFortune"
+    <bean id="myFortuneService"
           class="gn.springDemoOne.HappyFortuneService">
     </bean>
 
@@ -12,7 +12,14 @@
           class="gn.springDemoOne.TrackCoach">
 
         <!-- set up constructor injection -->
-        <constructor-arg ref="myFortune"/>
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    <bean id="myCricketCoach"
+          class="gn.springDemoOne.CricketCoach">
+
+        <!-- set up setter injection -->
+        <property name="fortuneService" ref="myFortuneService"/>
     </bean>
 
 </beans>
