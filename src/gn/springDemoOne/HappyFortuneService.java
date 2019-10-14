@@ -3,6 +3,13 @@ package gn.springDemoOne;
 public class HappyFortuneService implements FortuneService {
     @Override
     public String getFortune() {
-        return "Today is your lucky day!";
+
+        String [] fortunes = {
+                "Today is your lucky day!",
+                "Today you'll get a hit on your face by ball!",
+                "Today you'll brake your lag!"
+        };
+
+        return fortunes[(int)(Math.random() * 3)];
     }
 }
